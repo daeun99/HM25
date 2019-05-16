@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hm25 : Javascript object</title>
+    <style></style>
+    <script>
+      //new Object()를 이용해서 box 객체를 만들고
+      //(2), (3) 과정을 수행하여 결과를 출력하시오.
+      var box = new Object();
+      box.color = "red";
+      box.size = "10";
+      box.amount = 0;
+      box.fill = fill;
+      box.consume = consume;
+    </script>
+  </head>
+  <body>
+    <h3>hm25 box 객체 new object 사용출력</h3>
+    <hr />
+    <script>
+      var ques = "깜짝 퀴즈 !! 박스의 초기  amount 값을 예측해 보세요 !";
+      var user = prompt(ques + "         값은 얼마입니까?", 0);
+      document.body.style.backgroundColor = "#2E9AFE";
+      document.write("box: ");
+      document.write(box.color + ", " + box.size + ", " + box.amount + "<br>");
+      document.write("box-Color: ");
+      document.write(box.color + "<br>");
+      document.write("box-Size: ");
+      document.write(box.size + "<br>");
+      document.write("box-Amount: ");
+      document.write(box.amount + "<br>");
+      account.fill();
+      document.write(
+        "document.write()로 amount 프로퍼티 값 호출  " +
+          account.inquiry() +
+          "<br>"
+      );
+      account.consume();
+      document.write(
+        "document.write()로 amount 프로퍼티 값 호출 " +
+          account.inquiry() +
+          "<br>"
+      );
+      if (user == null) {
+        document.write("구구단 연습을 종료합니다");
+      } else {
+        var ans = 0;
+        if (ans == user) document.write("정답! ");
+        else document.write("아니오! ");
+        document.write(
+          "박스의 초기 amount 값은" + "<strong>" + ans + "</strong>입니다<hr>"
+        );
+      }
+    </script>
+  </body>
+</html>
