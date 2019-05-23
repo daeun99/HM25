@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hm25 : Javascript BOM</title>
+    <style></style>
+
+    <script>
+      function load() {
+        var select = document.getElementById("site");
+        window.location = select.options[select.selectedIndex].value;
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <h3>hm25 가장 좋아하는 영화 best3</h3>
+    <hr />
+    사이트 선택 :
+    <select id="site">
+      <option>선택하시오</option>
+      <option
+        value="https://namu.wiki/w/%EB%B7%B0%ED%8B%B0%20%EC%9D%B8%EC%82%AC%EC%9D%B4%EB%93%9C"
+        >뷰티 인사이드(2015)
+      </option>
+      <option
+        value="https://namu.wiki/w/%EB%85%B8%ED%8A%B8%EB%B6%81(%EC%98%81%ED%99%94)"
+        >노트북(2004)
+      </option>
+      <option
+        value="https://namu.wiki/w/%EA%B3%A4%EC%A7%80%EC%95%94(%EC%98%81%ED%99%94)"
+        >곤지암(2018)
+      </option>
+    </select>
+
+    <p>
+      <button onclick="load()">웹 사이트 접속</button>
+    </p>
+  </body>
+</html>
