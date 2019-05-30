@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>hm25_image5</title>
+    <script>
+      // 미리 로딩해둘 이미지 이름 배열
+      var files = [
+        "media/cat.png",
+        "media/niceview.png",
+        "media/rameon.png",
+        "media/orora.png",
+        "media/ongs.png"
+      ];
+      var imgs = new Array();
+      for (var i = 0; i < files.length; i++) {
+        imgs[i] = new Image(); // 메모리에 이미지 객체 생성
+        imgs[i].src = files[i]; // 이미지 로딩
+      }
+      // 다음 이미지 출력
+      var next = 1;
+      function change(img) {
+        img.src = imgs[next].src; // 이미지 변경
+        var nameSplit = files[next].split("/");
+        var nameText = document.getElementById("name");
+        var sizeText = document.getElementById("size");
+        nameText.innerHTML = "이미지 이름: " + nameSplit[1]; //이벤트 객체의 프로퍼티 출력
+        sizeText.innerHTML = "폭: " + img.width + "높이: " + img.height;
+        next++; // 다음 이미지
+        next %= imgs.length; // 개수를 넘으면 처음으로
+      }
+      function init(img) {
+        var nameSplit = files[next - 1].split("/");
+        var nameText = document.getElementById("name");
+        var sizeText = document.getElementById("size");
+        img.src = files[next - 1];
+        nameText.innerHTML = "이미지 이름: " + nameSplit[1]; //이벤트 객체의 프로퍼티 출력
+        sizeText.innerHTML = "폭: " + img.width + "높이: " + img.height;
+      }
+    </script>
+  </head>
+  <body>
+    <h3>hm25_image5</h3>
+    <hr />
+    이미지를 클릭하면 다음 이미지를 보여줍니다.
+    <p>
+      <img
+        style="border:20px ridge wheat"
+        src="media/cat.png"
+        alt="고양이"
+        width="400"
+        height="400"
+        onclick="change(this)"
+        onload="init(this)"
+      />
+    </p>
+    <p id="name"></p>
+    <p id="size"></p>
+  </body>
+</html>
