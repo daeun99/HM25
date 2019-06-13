@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+	<head>
+		<!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+		<meta charset="utf-8">
+		<title>hm25 : CSS3 advanced</title>
+		<style>
+            
+            @keyframes bomb
+            {
+            from { font-size : 100%;}
+            to { font-size : 300%;}
+        }
+        span1 { animation-name: bomb;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;}
+            
+            @keyframes textColorAnimation
+            {
+            100%{color: skyblue;}
+                
+            70%{color: magenta;}
+                
+            50%{color: palegreen;}
+                
+            35%{color: red;}
+                
+            20%{color: yellow;}
+                
+            0%{color: cyan;}
+        }
+        span2 { animation-name: textColorAnimation;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;}
+            
+            span3 { transition : font-size 5s;} 
+            span3:hover{font-size : 300%;}
+            span4 { color: red; font-size: 30px; }
+        
+            div {
+                display: inline-block;
+                position: absolute;
+                border-image: url(media/christmas-frame-3872321_640.png)round;
+            }
+            
+            img{position: absolute}
+            
+            div > p {
+                display: inline-block;
+                /*div의 자식*/
+                position: absolute;
+                /*절대 배치*/
+                height: 25px;
+                width: 20px;
+                
+            }
+            div>p1 {
+            display: inline-block;
+            /* div의 자식 p */
+            position: absolute;
+            /* 절대 배치 */
+            height: 30px;
+            width: 20px;
+            background: skyblue;
+            color: red;
+        }
+        div>p2 {
+            display: inline-block;
+            /* div의 자식 p */
+            position: absolute;
+            /* 절대 배치 */
+            height: 30px;
+            width: 20px;
+            background: green;
+            color: gold;
+        }
+        div>p3 {
+            display: inline-block;
+            /* div의 자식 p */
+            position: absolute;
+            /* 절대 배치 */
+            height: 30px;
+            width: 20px;
+            background: green;
+            color: white;
+        }
+        div>p4 {
+            display: inline-block;
+            /* div의 자식 p */
+            position: absolute;
+            /* 절대 배치 */
+            height: 30px;
+            width: 20px;
+            background: greenyellow;
+            color: purple;
+        }
+        div>p5 {
+            display: inline-block;
+            /* div의 자식 p */
+            position: absolute;
+            /* 절대 배치 */
+            height: 30px;
+            width: 20px;
+            background: yellow;
+            color: green;
+        }
+        div>p6 {
+            display: inline-block;
+            /* div의 자식 p */
+            position: absolute;
+            /* 절대 배치 */
+            height: 30px;
+            width: 20px;
+            background: white;
+            color: black;
+        }
+        div>p7 {
+            display: inline-block;
+            /* div의 자식 p */
+            position: absolute;
+            /* 절대 배치 */
+            height: 30px;
+            width: 20px;
+            background: purple;
+            color: white;
+        }
+        div>p8 {
+            display: inline-block;
+            /* div의 자식 p */
+            position: absolute;
+            /* 절대 배치 */
+            height: 30px;
+            width: 20px;
+            background: red;
+            color: white;
+        }
+        div>p9 {
+            display: inline-block;
+            /* div의 자식 p */
+            position: absolute;
+            /* 절대 배치 */
+            height: 30px;
+            width: 20px;
+            background: skyblue;
+            color: black;
+        }
+        div>p10 {
+            display: inline-block;
+            /* div의 자식 p */
+            position: absolute;
+            /* 절대 배치 */
+            height: 30px;
+            width: 20px;
+            background: yellow;
+            color: black;
+        }
+            div>p11 {
+                display: inline-block;
+            /* div의 자식 p */
+            position: absolute;
+            /* 절대 배치 */
+            height: 30px;
+            width: 20px;
+            background: pink;
+            color: red;
+            }
+            
+            #name
+            {
+                width: 100px;
+                padding: 4px;
+                background: yellow;
+                color:black;
+            }
+			
+            #audio
+            {
+                position: absolute;
+                top:460px;
+                left: 20px;
+            }
+		</style>
+		<script></script>
+	</head>
+
+        <body>
+            <h3><span1><span2>Merry Christmas!</span2></span1>
+            </h3>
+        <hr>
+        
+        <div>
+            <img src="media/christmastree.png"
+		  width="300" height="350" style="left: 20px; top: 15px"
+		  alt="크리스마스 트리">
+        
+        <img src="media/my_christmas_004_anwansoon.png"
+             width="80" height="80" style="left: 210px; top: 320px"
+             alt="장식트리볼">
+        
+        <img src="media/christmas-snowman-icon_su3989.png"
+             width="100" height="100" style="left: 230px; top: 340px"
+             alt="눈사람">
+            
+        <img src="media/giftbox.png" width="80" height="80" style="left: 35px; top: 350px" alt="선물상자">
+        
+        <img src="media/christmas-frame-3872321_640.png"
+             width="340" height="455"
+             alt="테두리">
+        
+        <audio id="audio"
+               src="media/We_Wish_You_a_Merry_Christmas_melody4arab.com.mp3" controls autoplay loop></audio>
+            
+            <div id="name" style="left: 125px; top: 400px; ">HM25,송다은</div>
+            
+            <p1 style="left: 140px; top: 70px">M</p1>
+            <p2 style="left: 155px; top: 90px">E</p2>
+            <p3 style="left: 170px; top: 110px">R</p3>
+            <p4 style="left: 190px; top: 130px">R</p4>
+            <p5 style="left: 170px; top: 155px">Y</p5>
+            <p6 style="left: 150px; top: 175px">X</p6>
+            <p7 style="left: 130px; top: 200px">ㅡ</p7>
+            <p8 style="left: 110px; top: 220px">M</p8>
+            <p9 style="left: 130px; top: 240px">A</p9>
+            <p10 style="left: 145px; top: 260px">S</p10>
+            <p11 style="left: 160px; top: 280px">♥</p11>
+            
+        </div>
+            
+	</body>
+
+</html>
